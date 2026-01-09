@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+// Node structure
+struct Node {
+    int data;
+    Node* next;
+};
+
+int main() {
+    // Creating nodes
+    Node* head = new Node();
+    Node* second = new Node();
+    Node* third = new Node();
+
+    // Assigning data
+    head->data = 10;
+    head->next = second;
+
+    second->data = 20;
+    second->next = third;
+
+    third->data = 30;
+    third->next = NULL;
+
+    // Accessing elements (traversal)
+    Node* temp = head;
+    cout << "Linked List elements are: ";
+
+    while (temp != NULL) {
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+
+    return 0;
+}
